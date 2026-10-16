@@ -1,4 +1,10 @@
-﻿# Enterprise Cloud Infrastructure for Generative AI (Terraform)
+# Enterprise Cloud Infrastructure for Generative AI (Terraform)
+
+[![Terraform](https://img.shields.io/badge/Terraform-1.7+-7B42BC.svg?logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![Azure](https://img.shields.io/badge/Microsoft_Azure-Architecture-0078D4.svg?logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com/)
+[![AWS](https://img.shields.io/badge/AWS-Reference_Design-FF9900.svg?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Security: Zero Trust](https://img.shields.io/badge/Security-Zero_Trust-success.svg)](https://www.cisecurity.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Blueprint de **Infraestructura como Codigo (IaC)** en Terraform disenado para el despliegue desacoplado, seguro y altamente disponible de servicios de **IA Generativa y RAG** en entornos corporativos (Microsoft Azure / AWS).
 
@@ -30,19 +36,19 @@ graph TD
 
 ## Estructura del Modulo
 
-```text
-â”œâ”€â”€ environments/
-â”‚   â”œâ”€â”€ dev/
-â”‚   â””â”€â”€ prod/
-â”œâ”€â”€ modules/
-â”‚   â”œâ”€â”€ network/        # VNets, Subnets, NSGs, Private Endpoints
-â”‚   â”œâ”€â”€ compute/        # Azure Container Apps / ECR + ECS
-â”‚   â”œâ”€â”€ database/       # Flexible Server PostgreSQL con soporte pgvector
-â”‚   â””â”€â”€ ai_services/    # Azure OpenAI deployments (GPT-4o, Embeddings)
-â”œâ”€â”€ main.tf
-â”œâ”€â”€ variables.tf
-â”œâ”€â”€ outputs.tf
-â””â”€â”€ terraform.tfvars.example
+```
+environments/
+  dev/
+  prod/
+modules/
+  network/        # VNets, Subnets, NSGs, Private Endpoints
+  compute/        # Azure Container Apps / ECR + ECS
+  database/       # Flexible Server PostgreSQL con soporte pgvector
+  ai_services/    # Azure OpenAI deployments (GPT-4o, Embeddings)
+main.tf
+variables.tf
+outputs.tf
+terraform.tfvars.example
 ```
 
 ## Despliegue
